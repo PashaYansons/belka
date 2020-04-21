@@ -1,0 +1,120 @@
+<html class=>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="shop.css">
+</head>
+
+<body>
+    <header class="header">
+
+        <nav class="nav">
+            <div class="navigation-container">
+                <div class="logo">
+                    <p>Bookworm shop
+                    </p>
+                    <div class="line"></div>
+                </div>
+                <div class="menu-items">
+                    <div class="nav_item"><a href="" class="link">Личный кабинет</a></div>
+                    <div class="nav_item"><a href="" class="link">О нас</a></div>
+                </div>
+
+            </div>
+            <div class="nav_right-container">
+                <div class="nav_item">
+                    <p>+375292322606</p>
+                </div>
+                <div class="nav_item"><button id="button"><img src="/asserts/basket.png" alt="" class="basket"></button>
+                </div>
+        </nav>
+        <div class="slider">
+            <div class="slider__wrapper">
+                <div class="slider__item">
+                    <div class="anonse">
+                        <p>Новинки уже в магазине!</p><img src="/asserts/book_item.png" alt=""></div>
+                </div>
+                <div class="slider__item">
+                    <div>2</div>
+                </div>
+
+            </div>
+            <a class="slider__control slider__control_left" href="#" role="button"></a>
+            <a class="slider__control slider__control_right slider__control_show" href="#" role="button"></a>
+        </div>
+    </header>
+    <div class="section_shop">
+        <div class="left">
+            <div class="search_container">
+                <h3>Поиск...</h3>
+                <input type="search" name="search" id="search" placeholder="Введите запрос...">
+                <div class="input-container">
+                    <input type="checkbox" name="check_first" id="check_first">
+                    <label for="check_first" class="check_label">Категории
+                         <img src="/asserts/dropdown.png" alt="" class="dropdown">
+                    </label>
+
+                    <div class="open_container_first">
+                        <input type="radio" name="category" id="horror">
+                        <label for="category" class="input-category">18 плюс</label>
+                        <input type="radio" name="category" id="thriller">
+                        <label for="category" class="input-category">18 минус</label>
+                    </div>
+                </div>
+            </div>
+            <div class="search_container">
+                <div class="input-container">
+                    <input type="checkbox" name="check_second" id="check_second">
+                    <label for="check_second" class="check_label">Ценовой сегмент
+                         <img src="/asserts/dropdown.png" alt="" class="dropdown">
+                    </label>
+
+                    <div class="open_container_second">
+                        <input type="radio" name="category" id="horror">
+                        <label for="category" class="input-category">Дешёвый</label>
+                        <input type="radio" name="category" id="thriller">
+                        <label for="category" class="input-category">Средний</label>
+                        <input type="radio" name="category" id="romans">
+                        <label for="category" class="input-category">Дорогой</label>
+                    </div>
+                </div>
+            </div>
+            <div class="search_container">
+                <div class="input-container">
+                    <input type="checkbox" name="check_third" id="check_third">
+                    <label for="check_third" class="check_label">Жанр
+                         <img src="/asserts/dropdown.png" alt="" class="dropdown">
+                    </label>
+
+                    <div class="open_container_third">
+                        <input type="radio" name="category" id="horror">
+                        <label for="category" class="input-category">Ужасы</label>
+                        <input type="radio" name="category" id="thriller">
+                        <label for="category" class="input-category">Триллеры</label>
+                        <input type="radio" name="category" id="romans">
+                        <label for="category" class="input-category">Романы</label>
+                        <input type="radio" name="category" id="classic">
+                        <label for="category" class="input-category">Мировая классика</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="cards-container">
+                <div id="card_1" class="card">
+                    <img src="/asserts/book_item.png" alt="" class="book_item">
+                    <p>Антуан Де Сент Экзюпери</p><span>Маленький принц</span>
+                </div>
+                <div id="card_1" class="card"></div>
+                <div id="card_1" class="card"></div>
+            </div>
+        </div>
+    </div>
+    <script src="shop.js" async defer></script>
+</body>
+
+</html>
