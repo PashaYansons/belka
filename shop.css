@@ -234,13 +234,15 @@ p {
 
 .right {
     height: 100%;
+    text-align: center;
     width: 85%;
+    margin-left: 80px;
 }
 
 .section_shop {
-    margin-left: 200px;
-    margin-right: 200px;
     display: flex;
+    width: 90%;
+    margin: auto;
 }
 
 input[type="search"]::-webkit-input-placeholder {
@@ -364,4 +366,37 @@ input[id="check_first"]:checked+.check_label>.dropdown {
 .book_item {
     height: 350px;
     width: 100%;
+}
+
+.book_name {
+    font-family: var(--text-another);
+    color: var(--color);
+}
+
+.card p {
+    font-family: var(--text-another);
+    font-size: 20px;
+    padding-top: 5px;
+}
+
+.buy-container {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: auto;
+    padding-top: 18px;
+}
+
+#button {
+    padding: 10px 20px;
+    background: #6A154B;
+    color: white;
+    font-family: var(--text-another);
+    border-radius: 20px;
+}
+
+.content-container {
+    width: 60%;
+    margin: auto;
+    border-bottom: 1px solid #6A154B;
 }
