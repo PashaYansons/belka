@@ -354,4 +354,14 @@ input[id="check_first"]:checked+.check_label>.dropdown {
 
 .card {
     width: 32%;
+    float: left;
+}
+
+.cards-container {
+    width: 100%;
+}
+
+.book_item {
+    height: 350px;
+    width: 100%;
 }
