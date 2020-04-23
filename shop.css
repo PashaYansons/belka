@@ -397,6 +397,55 @@ input[id="check_first"]:checked+.check_label>.dropdown {
     color: var(--color);
 }
 
+#table-container {
+    width: 80%;
+    height: 100px;
+    color: #fff;
+    margin: auto;
+}
+
+.forbasket {
+    width: 33%;
+    float: left;
+    height: 500px;
+}
+
+#basketOpen .forbasket {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 5px;
+    display: flex;
+    border: 1px solid #fff;
+    justify-content: space-between;
+}
+
+#basketOpen .book_name {
+    color: #fff;
+}
+
+#basketOpen .content-container {
+    width: 20%;
+    align-self: center;
+}
+
+#basketOpen .buy-container {
+    display: block;
+    justify-content: space-between;
+    width: 20%;
+    margin: 0;
+    padding: 0;
+    align-self: center;
+}
+
+#basketOpen .button-container {
+    display: none;
+}
+
+#table-container .book_item {
+    height: 100px;
+    width: 70px;
+}
+
 .card p {
     font-family: var(--text-another);
     font-size: 20px;
@@ -409,6 +458,22 @@ input[id="check_first"]:checked+.check_label>.dropdown {
     width: 60%;
     margin: auto;
     padding-top: 7%;
+}
+
+.buy {
+    padding: 10px 20px;
+    background: #6A154B;
+    color: white;
+    font-family: var(--text-another);
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.cost {
+    font-family: var(--text-another);
+    font-size: 20px;
+    padding-top: 5px;
 }
 
 #button {
@@ -530,6 +595,11 @@ input[id="check_first"]:checked+.check_label>.dropdown {
     .menu-items {
         display: none;
     }
+    .forbasket .book_author {
+        font-family: var(--text-another);
+        font-size: 14px;
+        padding-top: 5px;
+    }
     .line {
         display: none;
     }
@@ -545,6 +615,11 @@ input[id="check_first"]:checked+.check_label>.dropdown {
     .image {
         padding-left: 50px;
         padding-right: 50px;
+    }
+    .forbasket {
+        width: 50%;
+        float: left;
+        height: 500px;
     }
 }
 
@@ -613,9 +688,15 @@ input[id="button"] {
     display: block;
 }
 
+.book_author {
+    font-family: var(--text-another);
+    font-size: 20px;
+    padding-top: 5px;
+}
+
 #basketOpen {
-    position: relative;
-    height: 700px;
+    position: fixed;
+    max-height: 1700px;
     z-index: 3;
     width: 100%;
     padding-top: 100px;
@@ -630,6 +711,14 @@ input[id="button"] {
     text-align: center;
     padding-bottom: 10px;
     font-family: var(--text-another);
+}
+
+.result-container {
+    font-size: 25px;
+    color: white;
+    display: flex;
+    width: 80%;
+    margin: auto;
 }
 
 label {
@@ -647,10 +736,12 @@ label {
         display: block;
         padding-top: 10px;
     }
-}
-
-@media (max-width: 450px) {
-    .book_item {
-        height: 170px;
+    .forbasket {
+        width: 60%;
+        margin: auto;
+        float: none;
+        height: 400px;
     }
 }
+
+@media (max-width: 450px) {}
