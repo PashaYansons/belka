@@ -29,17 +29,30 @@
                 <div class="nav_item">
                     <p>+375292322606</p>
                 </div>
-                <div class="nav_item"><button id="button"><img src="/asserts/basket.png" alt="" class="basket"></button>
+                <div class="nav_item"><label for="button">
+                    <img src="/asserts/basket.png" alt="" class="basket">
+                </label>
+
+                </div>
+                <div class="nav_item">
+                    <p id="carrier">0</p>
                 </div>
         </nav>
+
+        <input type="checkbox" id="button">
+        <div id="basketOpen">
+            <h3>Ваша корзина</h3>
+            <div id="table-container"></div>
+        </div>
         <div class="slider">
             <div class="slider__wrapper">
                 <div class="slider__item">
                     <div class="anonse">
-                        <p>Новинки уже в магазине!</p><img src="/asserts/book_item.png" alt=""></div>
+                        <p>Новинки уже в магазине!</p><img src="/asserts/book_item.png" alt="" class="book_png"></div>
                 </div>
                 <div class="slider__item">
-                    <div>2</div>
+                    <div class="anonse">
+                        <p>Скидки до 20% на все книги!</p><img src="/asserts/book_item.png" alt="" class="book_png"></div>
                 </div>
 
             </div>
@@ -51,7 +64,11 @@
         <div class="left">
             <div class="search_container">
                 <h3>Поиск...</h3>
-                <input type="search" name="search" id="search" placeholder="Введите запрос...">
+                <div class="cont">
+                    <input type="text" name="search" value="" id="text-to-find" class="function_search" placeholder="Введите запрос...">
+                    <input type="button" class="func" onclick="FindOnPage('text-to-find'); return false;" value="Искать" />
+                </div>
+
                 <div class="input-container">
                     <input type="checkbox" name="check_first" id="check_first">
                     <label for="check_first" class="check_label">Категории
@@ -106,35 +123,45 @@
         <div class="right">
             <div class="cards-container">
                 <div id="card_1" class="card">
-                    <img src="/asserts/book_item.png" alt="" class="book_item">
-                    <div class="content-container">
-                        <p>Антуан Де Сент Экзюпери</p><span class="book_name">Маленький принц</span>
+                    <div class="image">
+                        <img src="/asserts/nikogda-ne-sdamsya-882.png" alt="" class="book_item">
                     </div>
+
+
+                    <div class="content-container">
+                        <p id="name_1">Илон Маск</p><span class="book_name" id="book_name_1">Никогда не сдамся</span>
+                    </div>
+
                     <div class="buy-container">
                         <div class="text">
-                            <p>100 гривен</p>
+                            <p id="cost_1">100 гривен</p>
                         </div>
                         <div class="button-container">
-                            <button id="button">Купить</button>
+                            <button id="button_1" class="buy" data-set="1" onclick="displaycount()">Купить</button>
                         </div>
                     </div>
                 </div>
-                <div id="card_1" class="card">
-                    <img src="/asserts/book_item.png" alt="" class="book_item">
+                <div id="card_2" class="card">
+                    <div class="image">
+                        <img src="/asserts/sasha.png" alt="" class="book_item">
+                    </div>
+
                     <div class="content-container">
-                        <p>Антуан Де Сент Экзюпери</p><span class="book_name">Маленький принц</span>
+                        <p>Александра Митрошина</p><span class="book_name">Продвижение INSTAGRAM</span>
                     </div>
                     <div class="buy-container">
                         <div class="text">
-                            <p>100 гривен</p>
+                            <p>200 гривен</p>
                         </div>
                         <div class="button-container">
-                            <button id="button">Купить</button>
+                            <button id="button_2" class="buy" data-set="1" onclick="displaycount()">Купить</button>
                         </div>
                     </div>
                 </div>
-                <div id="card_1" class="card">
-                    <img src="/asserts/book_item.png" alt="" class="book_item">
+                <div id="card_3" class="card">
+                    <div class="image">
+                        <img src="/asserts/mark.jpg" alt="" class="book_item">
+                    </div>
                     <div class="content-container">
                         <p>Антуан Де Сент Экзюпери</p><span class="book_name">Маленький принц</span>
                     </div>
@@ -143,14 +170,205 @@
                             <p>100 гривен</p>
                         </div>
                         <div class="button-container">
-                            <button id="button">Купить</button>
+                            <button id="button" class="buy" onclick="displaycount()">Купить</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="card_4" class="card">
+                    <div class="image">
+                        <img src="/asserts/book_item3.png" alt="" class="book_item">
+                    </div>
+                    <div class="content-container">
+                        <p>Майкл Френцезе</p><span class="book_name">Предложение</span>
+                    </div>
+                    <div class="buy-container">
+                        <div class="text">
+                            <p>100 гривен</p>
+                        </div>
+                        <div class="button-container">
+                            <button id="button" class="buy" onclick="displaycount()">Купить</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="card_5" class="card">
+                    <div class="image">
+                        <img src="/asserts/history.png" alt="" class="book_item">
+                    </div>
+                    <div class="content-container">
+                        <p>Кот Учёный</p><span class="book_name">Загадки истории</span>
+                    </div>
+                    <div class="buy-container">
+                        <div class="text">
+                            <p>100 гривен</p>
+                        </div>
+                        <div class="button-container">
+                            <button id="button" class="buy" onclick="displaycount()">Купить</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="card_6" class="card">
+                    <div class="image">
+                        <img src="/asserts/book_item4.png" alt="" class="book_item">
+                    </div>
+                    <div class="content-container">
+                        <p>Антoн Антонов-Овсеенко</p><span class="book_name">проект "Украина"</span>
+                    </div>
+                    <div class="buy-container">
+                        <div class="text">
+                            <p>100 гривен</p>
+                        </div>
+                        <div class="button-container">
+                            <button id="button" class="buy" onclick="displaycount()">Купить</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="card_7" class="card">
+                    <div class="image">
+                        <img src="/asserts/Dyller-realnosty_obl_3D.png" alt="" class="book_item">
+                    </div>
+                    <div class="content-container">
+                        <p>Николас Димитров</p><span class="book_name">Дилер реальности</span>
+                    </div>
+                    <div class="buy-container">
+                        <div class="text">
+                            <p>100 гривен</p>
+                        </div>
+                        <div class="button-container">
+                            <button id="button" class="buy" onclick="displaycount()">Купить</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="card_8" class="card">
+                    <div class="image">
+                        <img src="/asserts/Загадки_истории_Великие_завоеватели.png" alt="" class="book_item">
+                    </div>
+                    <div class="content-container">
+                        <p>Епам Епамович</p><span class="book_name">Загадки истории: великие завоеватели</span>
+                    </div>
+                    <div class="buy-container">
+                        <div class="text">
+                            <p>100 гривен</p>
+                        </div>
+                        <div class="button-container">
+                            <button id="button" class="buy" onclick="displaycount()">Купить</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="card_9" class="card">
+                    <div class="image">
+                        <img src="/asserts/king.jpg" alt="" class="book_item">
+                    </div>
+                    <div class="content-container">
+                        <p>Стивен Кинг</p><span class="book_name">Страна радости</span>
+                    </div>
+                    <div class="buy-container">
+                        <div class="text">
+                            <p>100 гривен</p>
+                        </div>
+                        <div class="button-container">
+                            <button id="button" class="buy" onclick="displaycount()">Купить</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="card_10" class="card">
+                    <div class="image">
+                        <img src="/asserts/predel.png" alt="" class="book_item">
+                    </div>
+                    <div class="content-container">
+                        <p>Стивен Кинг</p><span class="book_name">Предел</span>
+                    </div>
+                    <div class="buy-container">
+                        <div class="text">
+                            <p>100 гривен</p>
+                        </div>
+                        <div class="button-container">
+                            <button id="button" class="buy" onclick="displaycount()">Купить</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="card_11" class="card">
+                    <div class="image">
+                        <img src="/asserts/green.jpg" alt="" class="book_item">
+                    </div>
+                    <div class="content-container">
+                        <p>Стивен Кинг</p><span class="book_name">Зелёная миля</span>
+                    </div>
+                    <div class="buy-container">
+                        <div class="text">
+                            <p>100 гривен</p>
+                        </div>
+                        <div class="button-container">
+                            <button id="button" class="buy" onclick="displaycount()">Купить</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="card_12" class="card">
+                    <div class="image">
+                        <img src="/asserts/son.png" alt="" class="book_item">
+                    </div>
+                    <div class="content-container">
+                        <p>Стивен Кинг</p><span class="book_name">Доктор Сон</span>
+                    </div>
+                    <div class="buy-container">
+                        <div class="text">
+                            <p>100 гривен</p>
+                        </div>
+                        <div class="button-container">
+                            <button id="button" class="buy" onclick="displaycount()">Купить</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="functions">
+        <input type="checkbox" id="searchmobile" class="searchmobile">
+        <div class="searching">
+            <h3>Введите поисковый запрос</h3>
+            <div class="function_container">
+                <input type="text" placeholder="Найти..." class="function_search">
+                <button id="func" class="func">Найти</button>
+            </div>
+
+        </div>
+        <input type="checkbox" id="basket_total" class="searchmobile">
+        <div class="basketing">
+            <h3>Ваша корзина</h3>
+            <p>В вашей корзине <span> 0</span> товаров</p>
+        </div>
+
+    </div>
+    <div class="navigation_mobile">
+        <label for="searchmobile" class="label_mobile">
+            <img src="asserts/loopa.png" alt="" class="mobile-icons">
+            
+        </label>
+
+        <label for="basket_total" class="label_mobile">
+            <img src="asserts/basket.png" alt="" class="mobile-icons">
+            
+        </label>
+        <input type="radio" id="home" class="searchmobile">
+        <label for="home" class="label_mobile">
+            <img src="asserts/home-5-512.png" alt="" class="mobile-icons">
+            
+        </label>
+        <input type="radio" id="information" class="searchmobile">
+        <label for="information" class="label_mobile">
+            <img src="asserts/info-2-256.png" alt="" class="mobile-icons">
+            
+        </label>
+        <input type="radio" id="help" class="searchmobile">
+        <label for="help" class="label_mobile">
+            <img src="asserts/helpdesk-icon.png" alt="" class="mobile-icons">
+        </label>
+    </div>
+    </div>
+    <script src="basketadd.js"></script>
+    <script src="basket.js" defer></script>
+    <script src="displaycount.js"></script>
     <script src="shop.js" async defer></script>
+
 </body>
 
 </html>

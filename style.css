@@ -19,7 +19,7 @@ body {
 }
 
 .nav {
-    z-index: 2;
+    z-index: 4;
     background: rgba(106, 21, 75, 0.705);
     width: 100%;
     justify-content: space-between;
